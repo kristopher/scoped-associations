@@ -1,13 +1,21 @@
 ScopedAssociations
 ==================
 
-Introduction goes here.
+Use your named scopes to add conditions to associations! Keep your code DRY and allows eager loading of scoped associations.
 
+Currently this only works for has_many associations.
 
 Example
 =======
 
-Example goes here.
+class User < ActiveRecord::Base
+  has_many :published_posts, :scope => :published
+  has_many :published_and_approved_posts, :scope => [:published, :approved]
+end
 
+class Post < ActiveRecord::Base
+  named_scope :published, :conditions => { :published => true }
+  named_scope :approved, :conditions => { :approved => true }
+end
 
-Copyright (c) 2008 [name of plugin creator], released under the MIT license
+Copyright (c) 2008 Kristopher Chambers and Elijah Miller, released under the MIT license
