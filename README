@@ -18,4 +18,11 @@ class Post < ActiveRecord::Base
   named_scope :approved, :conditions => { :approved => true }
 end
 
-Copyright (c) 2008 Kristopher Chambers and Elijah Miller, released under the MIT license
+Install
+=======
+
+./script_plugin install git://github.com/kristopher/scoped-associations.git 
+
+Homepage: http://github.com/kristopher/scoped-associations
+Copyright (c) 2008 Kristopher Chambers <kristopher.chambers@gmail.com> and 
+Elijah Miller <elijah.miller@gmail.com>, released under the MIT license
