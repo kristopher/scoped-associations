@@ -46,5 +46,6 @@ module ActiveRecord
 end
 
 # FIXME: better place? :)
-require File.join(File.dirname(__FILE__), 'scoped_reflections')
-
+require File.join(File.dirname(__FILE__), 'scoped_reflection')
+ActiveRecord::Associations::HasManyAssociation.send(:include, ScopedReflection)
+ActiveRecord::Associations::HasManyThroughAssociation.send(:include, ScopedReflection)
