@@ -3,7 +3,7 @@ ScopedAssociations
 
 Use your named scopes to add conditions to associations! Keep your code DRY and allows eager loading of scoped associations.
 
-Currently this only works for has_many associations.
+Currently this only works for has_many associations, and probably only on Rails 2.2.
 
 Example
 =======
