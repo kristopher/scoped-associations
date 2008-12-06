@@ -5,9 +5,9 @@ module ScopedReflection
   end
 
   def scope_reflection(reflection)
-    if reflection.options && reflection.options[:scope]
+
       source_reflection_class = 
-        if reflection.options[:through] && reflection.respond_to?(:source_reflection) 
+        if reflection.is_a? ActiveRecord::Reflection::ThroughReflection 
           reflection.source_reflection.klass 
         else 
           reflection.klass
