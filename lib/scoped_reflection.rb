@@ -13,7 +13,7 @@ module ScopedReflection
         reflection.klass
       end
     
-    scope_names = [reflection.options[:scope]].flatten
+    scope_names = [reflection.options[:scope]].flatten.compact
     final_scope = scope_names.inject(source_reflection_class) do |accumulated_scope, scope|
       if accumulated_scope.respond_to?(scope)
         accumulated_scope.send(scope)
