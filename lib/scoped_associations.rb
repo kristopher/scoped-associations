@@ -4,9 +4,7 @@ module ActiveRecord
       super("Undefined Scope '#{scope}' for #{reflection.class_name}.")
     end 
   end
-end
 
-module ActiveRecord
   module Associations
     module ClassMethods      
       @@valid_keys_for_has_many_association << :scope
