@@ -3,6 +3,12 @@ require 'rake/testtask'
 require 'rake/rdoctask'
 require 'spec/rake/spectask'
 
+require 'echoe'
+Echoe.new 'scoped_assocations' do |p|
+
+end
+
+
 desc 'Default: run specs'
 task :default => :spec
 
