@@ -1,26 +1,21 @@
-require 'rake'
-require 'rake/testtask'
-require 'rake/rdoctask'
 require 'spec/rake/spectask'
 
 require 'echoe'
-Echoe.new 'scoped_assocations' do |p|
-
+Echoe.new 'scoped-associations' do |p|
+  p.description     = "DRY up your associations with named_scope conditions!"
+  # p.url             = "http://scoped-associations.rubyforge.org"
+  p.author          = "Kristopher Chambers"
+  p.email           = "kristopher.chambers@gmail.com"
+  p.retain_gemspec  = true
+  p.need_tar_gz     = false
+  p.extra_deps      = [
+  ]
 end
-
 
 desc 'Default: run specs'
 task :default => :spec
-
-Spec::Rake::SpecTask.new(:spec) do |t|
-  t.spec_files = FileList['spec/**/*_spec.rb']
+Spec::Rake::SpecTask.new do |t|
+  t.spec_files = FileList["spec/**/*_spec.rb"]
 end
 
-desc 'Generate documentation for the scoped_associations plugin.'
-Rake::RDocTask.new(:rdoc) do |rdoc|
-  rdoc.rdoc_dir = 'rdoc'
-  rdoc.title    = 'ScopedAssociations'
-  rdoc.options << '--line-numbers' << '--inline-source'
-  rdoc.rdoc_files.include('README')
-  rdoc.rdoc_files.include('lib/**/*.rb')
-end
+task :test => :spec

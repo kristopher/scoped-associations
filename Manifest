@@ -1,0 +1,12 @@
+CHANGELOG
+init.rb
+lib/scope_reflection.rb
+lib/scoped_associations.rb
+LICENSE
+Manifest
+Rakefile
+README
+spec/models.rb
+spec/scoped_associations_spec.rb
+spec/spec_helper.rb
+TODO
