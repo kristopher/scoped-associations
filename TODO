@@ -1,0 +1,9 @@
+A shortcut for generating multiple associations that are scoped:
+  has_many :posts
+  has_many :published_posts, :scope => :published
+  has_many :archived_posts, :scope => :archived
+
+  Could be shortened to:
+
+  has_many :posts, :and_scopes => [:published, :archived]
+  
