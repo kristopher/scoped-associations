@@ -5,7 +5,8 @@ lib/scoped_associations.rb
 LICENSE
 Manifest
 Rakefile
-README
+README.rdoc
+scoped-associations.gemspec
 spec/models.rb
 spec/scoped_associations_spec.rb
 spec/spec_helper.rb

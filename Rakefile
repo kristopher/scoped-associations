@@ -10,6 +10,7 @@ Echoe.new 'scoped-associations' do |p|
   p.need_tar_gz     = false
   p.extra_deps      = [
   ]
+  p.ignore_pattern  = ['spec/test.sqlite3']
 end
 
 desc 'Default: run specs'
