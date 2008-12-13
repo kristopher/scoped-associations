@@ -5,10 +5,8 @@ module ActiveRecord # :nodoc:
     end 
   end
 
-  module Associations # :nodoc:
-    module ClassMethods # :nodoc:
-      @@valid_keys_for_has_many_association << :scope
-    end
+  module Associations::ClassMethods # :nodoc:
+    @@valid_keys_for_has_many_association << :scope
   end
 end
 
