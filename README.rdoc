@@ -22,7 +22,7 @@ Rails 2.2.
 
 As a Rails plugin:
 
-  ./script_plugin install git://github.com/kristopher/scoped-associations.git 
+  ./script/plugin install git://github.com/kristopher/scoped-associations.git 
 
 Prefer gems?
 
