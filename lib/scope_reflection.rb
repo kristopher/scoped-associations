@@ -8,6 +8,7 @@ module ActiveRecord::Associations::ScopeReflection
 
     source_reflection_class = 
       if reflection.is_a? ActiveRecord::Reflection::ThroughReflection 
+        scope_reflection(reflection.active_record.reflections[reflection.through_reflection.name])        
         reflection.source_reflection.klass 
       else 
         reflection.klass
